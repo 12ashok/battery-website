@@ -3,110 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sri Ganapati Batteries | Ballari</title>
 
+<!-- ✅ IMPORTANT: External CSS -->
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-<!-- 🌙 Dark Mode -->
+<!-- 🌙 Dark Mode Toggle -->
 <button onclick="toggleDarkMode()" id="darkToggle">🌙</button>
 
-<!-- 🔋 Header -->
-<header>
-    <h1>🔋 Sri Ganapati Batteries</h1>
-    <p>Sales | Service | Replacement | Doorstep Support</p>
+<!-- 🔥 HERO SECTION -->
+<section class="hero">
+    <div class="hero-overlay"></div>
 
-    <a class="btn" href="tel:+919886695305">📞 Call Now</a>
-    <a class="btn" href="https://wa.me/919886695305">💬 WhatsApp</a>
-</header>
+    <div class="hero-content">
+        <h1>🔋 Sri Ganapati Batteries</h1>
+        <p>Car • Bike • Inverter Batteries | Sales & Service in Ballari</p>
+
+        <a class="btn" href="tel:+919886695305">📞 Call Now</a>
+        <a class="btn" href="https://wa.me/919886695305">💬 WhatsApp</a>
+    </div>
+</section>
 
 <!-- 🔋 PRODUCTS -->
-<div class="container">
-    <div class="section-title">Battery Products 🔋</div>
+<section class="container">
+    <h2 class="section-title">Our Battery Products</h2>
 
     <div class="cards">
 
         <div class="card">
-            <img src="images/amaron.jpg">
-            <p>Amaron Battery</p>
-            <a class="btn" href="https://wa.me/919886695305?text=I need Amaron Battery">Enquire</a>
+            <img src="images/battery.jpg" alt="Car Battery">
+            <h3>Car Battery</h3>
+            <p class="price">₹4,500 - ₹8,000</p>
+            <a class="btn" href="https://wa.me/919886695305?text=I need Car Battery">Enquire</a>
         </div>
 
         <div class="card">
-            <img src="images/exide.jpg">
-            <p>Exide Battery</p>
-            <a class="btn" href="https://wa.me/919886695305?text=I need Exide Battery">Enquire</a>
-        </div>
-
-        <div class="card">
-            <img src="images/inverter.jpg">
-            <p>Inverter Battery</p>
+            <img src="images/inverter.jpg" alt="Inverter Battery">
+            <h3>Inverter Battery</h3>
+            <p class="price">₹9,000 - ₹18,000</p>
             <a class="btn" href="https://wa.me/919886695305?text=I need Inverter Battery">Enquire</a>
         </div>
 
         <div class="card">
-            <img src="images/bike.jpg">
-            <p>Bike Battery</p>
+            <img src="images/bike.jpg" alt="Bike Battery">
+            <h3>Bike Battery</h3>
+            <p class="price">₹1,200 - ₹3,000</p>
             <a class="btn" href="https://wa.me/919886695305?text=I need Bike Battery">Enquire</a>
         </div>
 
     </div>
-</div>
+</section>
 
 <!-- ⭐ REVIEWS -->
-<div class="container">
-    <div class="section-title">Customer Reviews ⭐</div>
+<section class="container">
+    <h2 class="section-title">Customer Reviews ⭐</h2>
+
     <div class="cards">
 
         <div class="card">
             <p>⭐⭐⭐⭐⭐</p>
-            <p>Very fast service. Got battery at home.</p>
+            <p>Very fast doorstep service.</p>
             <p><b>- Ramesh</b></p>
         </div>
 
         <div class="card">
             <p>⭐⭐⭐⭐⭐</p>
-            <p>Best price in Ballari.</p>
+            <p>Best price and genuine batteries.</p>
             <p><b>- Suresh</b></p>
         </div>
 
         <div class="card">
             <p>⭐⭐⭐⭐⭐</p>
-            <p>Quick response and good quality.</p>
+            <p>Quick response and installation.</p>
             <p><b>- Imran</b></p>
         </div>
 
     </div>
-</div>
+</section>
+
+<!-- 📅 BOOKING FORM -->
+<section class="container">
+    <h2 class="section-title">Book Battery Service 📅</h2>
+
+    <form class="contact-form" onsubmit="sendWhatsApp(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="type" placeholder="Vehicle Type (Car/Bike/Inverter)" required>
+        <input type="text" id="location" placeholder="Your Location" required>
+
+        <button class="btn">Submit & WhatsApp</button>
+    </form>
+</section>
 
 <!-- 📞 CONTACT -->
-<div class="container">
-    <div class="contact-box">
+<section class="container contact-box">
+    <p><b>📞 Phone:</b> +91 9886695305</p>
+    <p><b>📍 Address:</b><br>
+    Shop No.1, Sangam Talkies,<br>
+    Opp. Old Private Bus Stand,<br>
+    Ballari, Karnataka - 583101</p>
+</section>
 
-        <p><b>📞 Phone:</b> +91 9886695305</p>
-
-        <p><b>📍 Address:</b><br>
-        Shop No.1, Sangam Talkies,<br>
-        Opp. Old Private Bus Stand,<br>
-        Ballari, Karnataka - 583101</p>
-
-        <p><b>💳 UPI:</b> yourupi@bank</p>
-
-        <a class="btn" href="https://maps.google.com/?q=4WVJ+FW Ballari">
-            📍 View Location
-        </a>
-
-    </div>
-</div>
-
-<!-- 📊 MAP -->
-<div class="container">
+<!-- 📍 GOOGLE MAP -->
+<section class="container">
     <iframe 
     src="https://www.google.com/maps?q=4WVJ+FW Ballari&output=embed"
-    width="100%" height="300" style="border-radius:10px;"></iframe>
-</div>
+    width="100%" height="300">
+    </iframe>
+</section>
 
 <!-- 🔻 FOOTER -->
 <footer>
@@ -114,11 +122,27 @@
 </footer>
 
 <!-- 💬 FLOATING WHATSAPP -->
-<a href="https://wa.me/919886695305?text=Hello I need battery"
-class="whatsapp-float">💬</a>
+<a href="https://wa.me/919886695305?text=Hello I need battery service"
+   class="whatsapp-float">💬</a>
 
-<!-- ⚙️ JS -->
-<script src="js/script.js"></script>
+<!-- ⚙️ JAVASCRIPT -->
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+
+function sendWhatsApp(e){
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let type = document.getElementById("type").value;
+    let location = document.getElementById("location").value;
+
+    let message = `Hello Sri Ganapati Batteries,%0A%0AI need service:%0AName: ${name}%0AVehicle: ${type}%0ALocation: ${location}`;
+
+    window.open(`https://wa.me/919886695305?text=${message}`);
+}
+</script>
 
 </body>
 </html>

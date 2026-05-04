@@ -1,66 +1,219 @@
-body {
+/* ===== RESET ===== */
+* {
     margin: 0;
-    font-family: Arial;
-    background: #eef2f3;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    background: #111;
+/* ===== BODY ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+    color: #222;
+    transition: all 0.3s ease;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    height: 70vh;
+    background: url('../images/battery.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
     color: white;
-    padding: 60px;
-    text-align: center;
+    z-index: 1;
 }
 
-.container {
-    padding: 30px;
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 24px;
+.hero p {
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== TITLES ===== */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* ===== CARDS ===== */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
 }
 
 .card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
 
 .card img {
     width: 100%;
-    height: 150px;
+    height: 170px;
     object-fit: cover;
 }
 
-.btn {
-    display: inline-block;
+.card h3 {
     margin-top: 10px;
-    padding: 10px;
-    background: green;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
+.card p {
+    padding: 5px 10px;
+}
+
+/* DARK CARD */
+body.dark .card {
+    background: #1e293b;
+}
+
+/* ===== PRICE ===== */
+.price {
+    color: #16a34a;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ===== FORM ===== */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* ===== CONTACT BOX ===== */
+.contact-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+body.dark .contact-box {
+    background: #1e293b;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: green;
+    background: #25D366;
     color: white;
-    padding: 15px;
+    padding: 16px;
     border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-body.dark {
+/* ===== DARK TOGGLE ===== */
+#darkToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 14px;
+    border-radius: 50px;
+    border: none;
     background: #111;
     color: white;
+    cursor: pointer;
+}
+
+body.dark #darkToggle {
+    background: #e2e8f0;
+    color: #111;
+}
+
+/* ===== MAP ===== */
+iframe {
+    border-radius: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero {
+        height: 60vh;
+    }
 }
